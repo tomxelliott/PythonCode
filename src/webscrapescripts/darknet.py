@@ -6,7 +6,6 @@ s = socks.socksocket()
 s.setproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", port=9050)
 s.connect(('https://nzxj65x32vh2fkhk.onion/all', 443))
 ss = ssl.wrap_socket(s, cert_reqs=ssl.CERT_REQUIRED, ca_certs="requests.cert.where()")
-
 print "Peer cert: ", ss.getpeercert()
 
 ss.write("""GET / HTTP/1.0\r\nHost:https://nzxj65x32vh2fkhk.onion/all\r\n\r\n""")
