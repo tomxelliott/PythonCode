@@ -25,3 +25,6 @@ def grades_variance(scores):
     return variance
     
 grades_variance(grades)
+
+def grades_std_deviation(variance):
+    return variance ** 0.5
