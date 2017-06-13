@@ -1,3 +1,26 @@
+# mask to check if furthest bit to the left is on.
+def check_bit4(input):
+    mask = 0b1000
+    desired = input & mask
+    if desired > 0:
+        return "on"
+    else:
+        return "off"
+
+print bin(0b1110 & 0b101)
+print bin(0b1110 | 0b101)
+print bin(0b1110 ^ 0b101)
+
+a = 0b10111011
+mask = 0b00000100
+print bin(a | mask)
+
+#the below flips all bits
+a = 0b11101110
+mask = 0b11111111
+print bin(a ^ mask)
+
+
 print 5 >> 4  # Right Shift
 print 5 << 1  # Left Shift
 print 8 & 5   # Bitwise AND
