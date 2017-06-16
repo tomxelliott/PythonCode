@@ -6,7 +6,7 @@ seed = 7
 numpy.random.seed(seed)
 
 # load 2003data.csv dataset
-dataset = numpy.loadtxt("complete_dataset.csv", delimiter=",")
+dataset = numpy.loadtxt("2005data.csv", delimiter=",")
 # split into input (X) and output (Y) variables
 # First 36 are input variables
 # 37th is output variable
