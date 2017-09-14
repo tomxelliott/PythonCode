@@ -5,7 +5,10 @@ class Phone:
   def __init__(self, number, model):
     self.number = number
     self.model = model
-    self.new = False
+    self.new = True
   
   def set_number(num):
     self.number = num
+   
+  def set_used():
+    self.new = False
