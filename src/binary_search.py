@@ -1,13 +1,13 @@
 def binary_search(data, target, low, high):
     if target > high:
         print "too big dude!"
-        break
+        return
     elif target < low:
         print "too small dude! ;p"
-        break
+        return
     elif target is not int:
         print "the target we are searching for must be a number!"
-        break
+        return
     else:
         if low > high:
             return False
