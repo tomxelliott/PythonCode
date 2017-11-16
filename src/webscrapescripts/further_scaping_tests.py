@@ -16,4 +16,4 @@ prices = tree.xpath('//span[@class="item-price"]/text()')
 
 
 print 'Buyers: ', buyers
-print 'Prices: ', prices/Users/tomelliott/Documents/python/untitled/web-scrape-101-example.py
+print 'Prices: ', prices
