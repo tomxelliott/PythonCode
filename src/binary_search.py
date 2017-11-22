@@ -1,9 +1,11 @@
+import sys
+
 def binary_search(data, target, low, high):
     if target > high:
         print "too big dude!"
     elif target < low:
         print "too small dude! ;p"
-    elif target is not int:
+    elif type(target) != int:
         print "the target we are searching for must be a number!"
     else:
         if low > high:
@@ -18,9 +20,26 @@ def binary_search(data, target, low, high):
                 return binary_search(data, target, mid+1, high)
 
 def main():
-    x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    user_input = int(input())
-    print binary_search(x, user_input, x[0], x[-1])
+    try:
+        x = []
+        i = 0
+        while i < 20:
+            try:
+                j = int(input())
+                x.append(j)
+                i += 1
+            except:
+                print "Please enter a positive number."
+
+        x.sort()
+        print x
+        print ""
+        print "Please enter a number you would like to search..."
+        user_input = input()
+        print binary_search(x, user_input, x[0], x[-1])
+    except KeyboardInterrupt:
+        sys.exit()
 
 if __name__=='__main__':
     main()
+
