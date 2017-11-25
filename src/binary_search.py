@@ -26,9 +26,11 @@ def main():
         while i < 20:
             try:
                 j = int(input())
+                ir j < 0:
+                    raise ValueError
                 x.append(j)
                 i += 1
-            except:
+            except ValueError:
                 print "Please enter a positive number."
 
         x.sort()
