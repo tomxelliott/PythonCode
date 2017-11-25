@@ -5,7 +5,7 @@ def binary_search(data, target, low, high):
         print "too big dude!"
     elif target < low:
         print "too small dude! ;p"
-    elif type(target) != int:
+    elif not isinstance(target, int):
         print "the target we are searching for must be a number!"
     else:
         if low > high:
@@ -26,7 +26,7 @@ def main():
         while i < 20:
             try:
                 j = int(input())
-                ir j < 0:
+                if j < 0 or not isinstance(j, int):
                     raise ValueError
                 x.append(j)
                 i += 1
