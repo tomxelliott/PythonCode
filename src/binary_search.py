@@ -32,7 +32,8 @@ def main():
                 i += 1
             except ValueError:
                 print "Please enter a positive number."
-
+            except NameError:
+                print "Please enter a valid number, not any other type!"
         x.sort()
         print x
         print ""
