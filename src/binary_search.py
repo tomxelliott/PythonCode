@@ -21,16 +21,11 @@ def main():
     try:
         print "Please enter a low value: "
         lower = int(input())
-
         print "Please enter a high value: "
         higher = int(input())
-
-        if lower and higher:
-            print "Please enter a number you would like to search..."
-            user_input = int(input())
-            print binary_search(user_input, lower, higher)
-        else:
-            print "Please try again..."
+        print "Please enter a number you would like to search..."
+        user_input = int(input())
+        print binary_search(user_input, lower, higher)
     except ValueError:
         print "Please enter a positive number."
     except NameError:
